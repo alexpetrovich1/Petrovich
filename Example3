@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n;
+            Console.Write("Enter the number of array elements: ");
+            n = Convert.ToInt32(Console.ReadLine());
+            double[] Data = new double[n];
+            int i = 0;
+            while (i < n)
+            {
+                Console.Write("Enter array element: ");
+                Data[i] = double.Parse(Console.ReadLine());
+                Console.WriteLine();
+                i++;
+            }
+            for (i = 0; i < n; i = i + 1)
+                Console.Write(Data[i] + " ");
+
+
+            int v = 0;
+            Console.WriteLine("\nMultiples of three:");
+            for (i = 0; i < n; i++)
+                if (Convert.ToInt32(Data[i]) % 3 == 0) { Console.WriteLine("Data[" + i + "]=" + Data[i]); v++; }
+            Console.WriteLine("Total:" + v);
+            Console.ReadKey();
+        }
+    }
+}
