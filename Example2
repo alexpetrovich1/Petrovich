@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication2
+{
+    class Program
+    {
+        [STAThread]
+        static void Main(string[] args)
+        {
+            string name1 = "Вячеслав";
+            Console.Write("Введите имя: ");
+            string name = Console.ReadLine();
+            if (name == name1)
+            {
+                Console.WriteLine("Привет, Вячеслав");
+            }
+            else
+            {
+                Console.WriteLine("Нет такого имени");
+            }
+            Console.Write(Environment.NewLine + "Для выхода нажмите enter");
+            Console.ReadLine();
+        }
+    }
+}
